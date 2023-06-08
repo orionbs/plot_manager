@@ -15,7 +15,7 @@ public class PropertiesTemplate {
     private String commune;
     private String numero;
     private String prefixe;
-    private String contenance;
+    private Integer contenance;
     private String arpente;
     private String section;
 

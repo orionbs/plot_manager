@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 public class Information {
 
     private String postalCode;
+    private String municipalityCode;
     private String section;
     private String number;
     private String prefix;
