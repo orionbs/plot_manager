@@ -1,6 +1,6 @@
 logging:
   level:
-    fr.orionbs.plot_project_project: debug
+    fr.orionbs.plot_manager: debug
 
 persistence:
   host: localhost

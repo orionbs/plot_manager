@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>fr.orionbs</groupId>
-    <artifactId>plot_worker_project</artifactId>
+    <artifactId>plot_manager</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>land_register_project</name>
-    <description>Land Register Project</description>
+    <name>plot_manager</name>
+    <description>Plot manager</description>
     <properties>
         <java.version>17</java.version>
         <spring-cloud.version>2022.0.3</spring-cloud.version>
@@ -44,6 +44,11 @@
             <groupId>com.mysql</groupId>
             <artifactId>mysql-connector-j</artifactId>
             <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
