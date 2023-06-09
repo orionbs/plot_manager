@@ -1,8 +1,9 @@
-name: Plot Manager Push Action -> Build
+name: 'Plot Manager Push Action -> Build'
 
 on:
   push:
-    - 'main'
+    branches:
+      - 'main'
 
 jobs:
 
