@@ -1,7 +1,7 @@
 package fr.orionbs.plot_manager.adapter.client.plot.mapper;
 
-import fr.orionbs.plot_manager.adapter.client.template.FeatureTemplate;
-import fr.orionbs.plot_manager.adapter.client.template.PropertiesTemplate;
+import fr.orionbs.plot_manager.adapter.client.plot.template.FeatureTemplate;
+import fr.orionbs.plot_manager.adapter.client.plot.template.PropertiesTemplate;
 import fr.orionbs.plot_manager.domain.model.Coordinate;
 import fr.orionbs.plot_manager.domain.model.History;
 import fr.orionbs.plot_manager.domain.model.Information;

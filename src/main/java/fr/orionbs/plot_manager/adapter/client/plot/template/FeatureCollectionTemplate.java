@@ -1,4 +1,4 @@
-package fr.orionbs.plot_manager.adapter.client.template;
+package fr.orionbs.plot_manager.adapter.client.plot.template;
 
 import lombok.Data;
 

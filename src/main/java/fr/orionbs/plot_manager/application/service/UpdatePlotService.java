@@ -7,6 +7,7 @@ import fr.orionbs.plot_manager.domain.exception.NullPlotException;
 import fr.orionbs.plot_manager.domain.model.Municipality;
 import fr.orionbs.plot_manager.domain.model.Plot;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Service;
@@ -15,9 +16,9 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
+@Slf4j
 public class UpdatePlotService implements UpdatePlotUseCase {
 
-    private final Log LOGGER = LogFactory.getLog(UpdatePlotService.class);
     private final SelectMunicipalityPort selectMunicipalityPort;
     private final SelectPlotPort selectPlotPort;
     private final ExistPlotPort existPlotPort;

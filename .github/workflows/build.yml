@@ -1,4 +1,4 @@
-name: 'Plot Manager Push Action -> Build'
+name: 'Plot Manager Action -> Build'
 
 on:
   push:
