@@ -14,6 +14,7 @@ public class PlotPersistenceMapper {
 
             Plot plot = new Plot();
             plot.setId(plotEntity.getId());
+
             return plot;
 
         } else {

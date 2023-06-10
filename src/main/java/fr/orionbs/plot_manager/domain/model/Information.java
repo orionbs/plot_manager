@@ -14,7 +14,7 @@ public class Information {
     private String section;
     private String number;
     private String prefix;
-    private Boolean check;
+    private boolean check;
 
 
 }

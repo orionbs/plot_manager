@@ -65,12 +65,14 @@ public class PlotClientMapper {
             }
 
             if (propertiesTemplate.getArpente() != null && !propertiesTemplate.getArpente().isBlank()) {
-                information.setCheck(Boolean.valueOf(propertiesTemplate.getArpente()));
+                information.setCheck(Boolean.parseBoolean(propertiesTemplate.getArpente()));
             }
 
             if (propertiesTemplate.getCommune() != null && !propertiesTemplate.getCommune().isBlank()) {
                 information.setMunicipalityCode(propertiesTemplate.getCommune());
             }
+
+            plot.setInformation(information);
 
 
         }

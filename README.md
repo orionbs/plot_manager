@@ -1,27 +1,28 @@
-# Plot Worker Project
-
-Task: Worker
-Subject: Plot
+# Plot Manager
 
 ## Introduction
 
-- This project is a worker, he does several tasks on the background.
-- His purpose is to get plot data from state base and store then properly on our plot databases.
+Plot manager has several functionality such as storing data about department and municipality to be able to also store data plot specific to an asked municipality. And also provide an API to outside. 
 
-## Running Purpose
+## What do you need ?
 
-### Image
+### 1. I want to run this project.
+
+* You might that to run this project you will need a database.
+* The one used here is MySQL.
+* So, please start an MySQL server the way you want.
+
+#### Image
 
 The image can be pull on Docker Hub through this command.
 
 ```bash
-docker pull orionbeauny/plot_worker_project
+docker pull orionbeauny/plot_manager
 ```
 
 ### Requirements
 
-- This image needs a MySQL database to work correctly.
-- These environments are requirement to be filled properly.
+- If you want that the image worked properly, please provide these environment variables.
 
 ```bash
 PERSISTENCE_HOST
@@ -31,13 +32,13 @@ PERSISTENCE_PASSWORD
 PERSISTENCE_DATABASE
 ```
 
-## Developing Purpose
+### 2. I need to develop on this project.
 
 ### System Requirements
 
 - Minimum hardware requirements
     - Java 17 or higher
-- Operating system requirements
+    - Maven
 - Network requirements
     - Ethernet connection
 
@@ -46,7 +47,25 @@ PERSISTENCE_DATABASE
 - Clone this repository
 
 ```bash
-cd ./plot_worker_project
+cd ./plot_manager
+```
+
+- You need to update this file with your database properties.
+
+```bash
+application-local.yml
+```
+
+- And then you can build the project with maven.
+
+```bash
+mvn clean package
+```
+
+- Then, you can run the jar command.
+
+```bash
+java -jar ./target/plot_manager.jar -Dspring.profiles.active=local
 ```
 
 ## Contributing
