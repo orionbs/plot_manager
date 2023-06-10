@@ -1,15 +1,11 @@
 package fr.orionbs.plot_manager.adapter.persistence.config;
 
-import org.springframework.boot.jdbc.DataSourceBuilder;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import javax.sql.DataSource;
 
 @Configuration
 public class PersistenceConfiguration {
 
-    @Bean
+    /*@Bean
     public DataSource dataSource(PersistenceProperties persistenceProperties) {
         DataSourceBuilder<?> dataSourceBuilder = DataSourceBuilder.create();
         dataSourceBuilder.driverClassName("com.mysql.cj.jdbc.Driver");
@@ -17,6 +13,6 @@ public class PersistenceConfiguration {
         dataSourceBuilder.username(persistenceProperties.getUsername());
         dataSourceBuilder.password(persistenceProperties.getPassword());
         return dataSourceBuilder.build();
-    }
+    }*/
 
 }

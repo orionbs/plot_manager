@@ -25,11 +25,11 @@ docker pull orionbeauny/plot_manager
 - If you want that the image worked properly, please provide these environment variables.
 
 ```bash
-PERSISTENCE_HOST
-PERSISTENCE_PORT
-PERSISTENCE_USERNAME
-PERSISTENCE_PASSWORD
-PERSISTENCE_DATABASE
+SPRING_DATASOURCE_DRIVER-CLASS-NAME : com.mysql.cj.jdbc.Driver
+SPRING_DATASOURCE_URL : jdbc:mysql://localhost:3306/plot_manage_database
+SPRING_DATASOURCE_USERNAME : root
+SPRING_DATASOURCE_PASSWORD : root-password
+SPRING_JPA_DATABASE-PLATFORM : org.hibernate.dialect.MySQLInnoDBDialect
 ```
 
 ### 2. I need to develop on this project.
@@ -59,13 +59,13 @@ application-local.yml
 - And then you can build the project with maven.
 
 ```bash
-mvn clean package
+./mvnw clean package
 ```
 
 - Then, you can run the jar command.
 
 ```bash
-java -jar ./target/plot_manager.jar -Dspring.profiles.active=local
+java -jar ./target/plot_manager-0.0.1-SNAPSHOT.jar -Dspring.profiles.active=local
 ```
 
 ## Contributing
