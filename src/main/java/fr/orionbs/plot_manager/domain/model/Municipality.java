@@ -2,27 +2,22 @@ package fr.orionbs.plot_manager.domain.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-import java.util.Objects;
+import java.time.LocalDateTime;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Municipality {
+    private Integer id;
+    private String recordId;
+    private String dataSetId;
+    private String postalCode;
+    private String routingCode;
     private String municipalityCode;
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Municipality that = (Municipality) o;
-        return Objects.equals(municipalityCode, that.municipalityCode);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(municipalityCode);
-    }
+    private Double longitude;
+    private Double latitude;
+    private String municipalityName;
+    private LocalDateTime recordDateTime;
 }

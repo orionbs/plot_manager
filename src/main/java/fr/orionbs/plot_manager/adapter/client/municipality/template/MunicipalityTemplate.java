@@ -8,4 +8,5 @@ public class MunicipalityTemplate {
     private String recordid;
     private FieldsTemplate fields;
     private GeometryTemplate geometry;
+    private String record_timestamp;
 }

@@ -3,7 +3,7 @@ package fr.orionbs.plot_manager.adapter.client.municipality;
 import fr.orionbs.plot_manager.adapter.client.municipality.mapper.MunicipalityClientMapper;
 import fr.orionbs.plot_manager.adapter.client.municipality.proxy.MunicipalityProxy;
 import fr.orionbs.plot_manager.adapter.client.municipality.template.MunicipalityTemplate;
-import fr.orionbs.plot_manager.application.port.output.SelectMunicipalityPort;
+import fr.orionbs.plot_manager.application.port.output.DownloadMunicipalityPort;
 import fr.orionbs.plot_manager.domain.model.Municipality;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -17,13 +17,13 @@ import java.util.stream.Collectors;
 @Component
 @RequiredArgsConstructor
 @Slf4j
-public class MunicipalityClientAdapter implements SelectMunicipalityPort {
+public class MunicipalityClientAdapter implements DownloadMunicipalityPort {
 
     private final MunicipalityProxy municipalityProxy;
     private final MunicipalityClientMapper municipalityClientMapper;
 
     @Override
-    public List<Municipality> selectMunicipalities() {
+    public List<Municipality> downloadMunicipalities() {
 
         log.debug("Starting fetching municipalities from external api.");
 

@@ -8,8 +8,6 @@ import fr.orionbs.plot_manager.domain.model.Municipality;
 import fr.orionbs.plot_manager.domain.model.Plot;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -19,7 +17,7 @@ import java.util.List;
 @Slf4j
 public class UpdatePlotService implements UpdatePlotUseCase {
 
-    private final SelectMunicipalityPort selectMunicipalityPort;
+    private final DownloadMunicipalityPort downloadMunicipalityPort;
     private final SelectPlotPort selectPlotPort;
     private final ExistPlotPort existPlotPort;
     private final InsertPlotPort insertPlotPort;
@@ -28,7 +26,7 @@ public class UpdatePlotService implements UpdatePlotUseCase {
     @Override
     public void updatePlot() {
 
-        List<Municipality> municipalities = selectMunicipalityPort.selectMunicipalities();
+        List<Municipality> municipalities = downloadMunicipalityPort.downloadMunicipalities();
 
         for (Municipality municipality : municipalities) {
 

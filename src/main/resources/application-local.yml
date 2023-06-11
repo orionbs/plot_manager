@@ -3,11 +3,10 @@ spring:
     name: Plot Manager
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/plot_manage_database
+    url: jdbc:mysql://localhost:3306/plot_manager_database
     username: root
     password: root-password
   jpa:
-    database-platform: org.hibernate.dialect.MySQLInnoDBDialect
     hibernate:
       ddl-auto: update
     open-in-view: false

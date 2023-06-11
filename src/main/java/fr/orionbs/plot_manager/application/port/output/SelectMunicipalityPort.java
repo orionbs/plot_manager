@@ -2,8 +2,8 @@ package fr.orionbs.plot_manager.application.port.output;
 
 import fr.orionbs.plot_manager.domain.model.Municipality;
 
-import java.util.List;
+import java.util.Optional;
 
 public interface SelectMunicipalityPort {
-    List<Municipality> selectMunicipalities();
+    Optional<Municipality> selectMunicipalityByPostalCode(String postalCode);
 }

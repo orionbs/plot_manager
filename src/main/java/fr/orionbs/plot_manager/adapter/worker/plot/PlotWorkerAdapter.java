@@ -1,4 +1,4 @@
-package fr.orionbs.plot_manager.adapter.worker;
+package fr.orionbs.plot_manager.adapter.worker.plot;
 
 import fr.orionbs.plot_manager.application.port.input.UpdatePlotUseCase;
 import lombok.RequiredArgsConstructor;
@@ -13,7 +13,7 @@ public class PlotWorkerAdapter {
 
     private final UpdatePlotUseCase updatePlotUseCase;
 
-    @Scheduled(initialDelay = 1, fixedDelay = 3600, timeUnit = TimeUnit.MINUTES)
+    //@Scheduled(initialDelay = 1, fixedDelay = 3600, timeUnit = TimeUnit.MINUTES)
     public void scheduledPlotUpdate() {
         updatePlotUseCase.updatePlot();
     }
