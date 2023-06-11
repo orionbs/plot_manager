@@ -43,9 +43,9 @@ jobs:
         id: meta
         uses: docker/metadata-action@v4.4.0
         with:
-          images:
+          images: |
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-          tags:
+          tags: |
             type=ref,event=branch
             type=ref,event=pr
             type=semver,pattern={{version}}
