@@ -8,7 +8,7 @@ on:
 jobs:
 
   build:
-    name: Build Project Main Branch
+    name: 'Build Project Main Branch'
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repository
@@ -25,7 +25,7 @@ jobs:
         run: mvn --batch-mode clean compile
 
   publish:
-    name: Publish Project Main Branch
+    name: 'Publish Project Main Branch'
     runs-on: ubuntu-latest
     if: build
     steps:
