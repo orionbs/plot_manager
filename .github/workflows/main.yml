@@ -44,7 +44,7 @@ jobs:
         uses: docker/metadata-action@v4.4.0
         with:
           images: |
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+            ${{ github.repository }}
           tags: |
             type=ref,event=branch
             type=ref,event=pr
