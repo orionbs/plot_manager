@@ -1,18 +1,33 @@
-name: 'Plot Manager Action -> Publish'
+name: 'Plot Manager Action -> Main'
 
 on:
   push:
     branches:
       - 'main'
 
-env:
-  REGISTRY: docker.io
-  IMAGE_NAME: ${{ github.repository }}
-
 jobs:
 
   build:
+    name: Build Project Main Branch
     runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v3
+
+      - name: Set up java environment
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: 'maven'
+
+      - name: Build with maven
+        run: mvn --batch-mode clean compile
+
+  publish:
+    name: Publish Project Main Branch
+    runs-on: ubuntu-latest
+    if: build
     steps:
       - name: Check out the repository
         uses: actions/checkout@v3
