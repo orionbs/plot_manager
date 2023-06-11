@@ -27,7 +27,7 @@ jobs:
   publish:
     name: 'Publish Project Main Branch'
     runs-on: ubuntu-latest
-    if: build
+    needs: [build]
     steps:
       - name: Check out the repository
         uses: actions/checkout@v3
