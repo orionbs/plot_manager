@@ -16,12 +16,5 @@ logging:
   level:
     fr.orionbs.plot_manager: debug
 
-  #persistence:
-  # host: localhost
-  #port: 3306
-  #username: root
-  #password: rootpassword
-  #database: plot_manager_database
-
-
-
+server:
+  port: 9000

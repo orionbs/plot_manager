@@ -6,3 +6,6 @@ spring:
       ddl-auto: none
     open-in-view: false
     generate-ddl: false
+
+server:
+  port: 8080

@@ -16,3 +16,6 @@ spring:
 logging:
   level:
     fr.orionbs.plot_manager: debug
+
+server:
+  port: 9000
